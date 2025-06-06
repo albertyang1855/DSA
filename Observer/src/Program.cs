@@ -9,6 +9,7 @@ class Program
         CurrentConditionsDisplay currentDisplay = new CurrentConditionsDisplay(weatherData);
 
         weatherData.SetMeasurements(22.5f, 65f, 1013.1f);
+
         weatherData.SetMeasurements(23.0f, 70f, 1012.5f);
     }
 }
