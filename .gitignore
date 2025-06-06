@@ -34,7 +34,7 @@ artifacts/
 ## VS Code
 .vscode/
 *.code-workspace
-*.vs
+.vs/
 
 ## Others
 *.dbmdl
