@@ -11,5 +11,6 @@ namespace Visitor.Visitor.Domain.Enemy.Interface
     public interface IEnemy
     {
         void Accept(IWeapon weapon);
+        void UpdateHP(int HP);
     }
 }

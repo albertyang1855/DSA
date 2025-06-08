@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using Visitor.Visitor.Domain.Weapon.Impl;
@@ -10,7 +11,11 @@ namespace Visitor.Visitor.Domain.Enemy.Impl
 {
     public class Dragon : Enemy
     {
-        public Dragon() { this.HP = 300; }
+        private const string DragonName = "Dragon";
+        public Dragon() {
+            this.Name = DragonName;    
+            this.HP = 300; 
+        }
         public override void Accept(IWeapon weapon)
         {
             weapon.VisitDragon(this);

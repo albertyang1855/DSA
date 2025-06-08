@@ -12,9 +12,20 @@ namespace Visitor.Visitor.Domain.Weapon.Impl
     {
         public int durability { get; set; }
 
+        public string Name { get; set; }
+
         public abstract void VisitDragon(Dragon dragon);
 
         public abstract void VisitWitch(Witch witch);
 
+        public abstract void VisitSoldier(Soldier witch);
+
+        public void UpdateDurability(int durabilityChange)
+        {
+            this.durability += durabilityChange;
+            this.durability = this.durability < 0 ? 0 : this.durability;
+
+            Console.WriteLine(this.Name + " durability is deducted : " + this.durability + "\n");
+        }
     }
 }

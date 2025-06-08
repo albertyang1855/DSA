@@ -11,5 +11,7 @@ namespace Visitor.Visitor.Domain.Weapon.Interface
     {
         public void VisitDragon(Dragon dragon);
         public void VisitWitch(Witch dragon);
+        public void VisitSoldier(Soldier dragon);
+        public void UpdateDurability(int durability);
     }
 }

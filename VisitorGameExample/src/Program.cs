@@ -12,6 +12,7 @@ class Program
         {
             new Dragon(),
             new Witch(),
+            new Soldier()
         };
 
         IWeapon dagger = new Dagger();

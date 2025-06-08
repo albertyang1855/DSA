@@ -10,25 +10,32 @@ namespace Visitor.Visitor.Domain.Weapon.Impl
 {
     public class Dagger : Weapon
     {
-        public Dagger() { this.durability = 70; }
+        private const string DaggerName = "Dagger";
+
+        public Dagger() 
+        { 
+            this.Name = DaggerName;
+            this.durability = 70; 
+        }
+
+
         public override void VisitDragon(Dragon dragon)
         {
-            this.durability -= 3;
-            
-            dragon.HP -= 30;
-
-            Console.WriteLine("dragon hp is deducted : " + dragon.HP + "\n");
-            Console.WriteLine("your daggar durability is deducted : " + this.durability + "\n");
+            dragon.UpdateHP(-30);
+            UpdateDurability(-3);
         }
 
         public override void VisitWitch(Witch witch)
         {
-            this.durability -= 5;
-
-            witch.HP -= 50;
-
-            Console.WriteLine("witch hp is deducted : " + witch.HP + "\n");
-            Console.WriteLine("your daggar durability is deducted : " + this.durability + "\n");
+            witch.UpdateHP(-50);
+            UpdateDurability(-5);
         }
+
+        public override void VisitSoldier(Soldier soldier) 
+        {
+            soldier.UpdateHP(-60);
+            UpdateDurability(-3);
+        }
+
     }
 }
