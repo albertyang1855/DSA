@@ -18,7 +18,7 @@ namespace Visitor.Visitor.Domain.Weapon.Impl
 
         public abstract void VisitWitch(Witch witch);
 
-        public abstract void VisitSoldier(Soldier witch);
+        public abstract void VisitSoldier(Soldier soldier);
 
         public void UpdateDurability(int durabilityChange)
         {
